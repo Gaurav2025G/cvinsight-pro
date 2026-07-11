@@ -23,48 +23,14 @@ CVInsight Pro replicates how ATS software reads your resume. Upload your resume,
 
 ## 📸 Screenshots
 
-> Add your screenshots here after setup
-
-| Landing Page | Score Result | History |
-|---|---|---|
-| ![Landing](docs/screenshots/landing.png) | ![Scorer](docs/screenshots/scorer.png) | ![History](docs/screenshots/history.png) |
+<img width="1908" height="906" alt="Screenshot 2026-07-11 200002" src="https://github.com/user-attachments/assets/3748d60e-5c86-4ade-b169-72d2fdf3c6be" />
 
 ---
 
 ## ⚙️ How It Works
 
-```
-┌─────────────────────┐     ┌──────────────────────┐
-│   Resume (PDF/DOCX) │     │    Job Description   │
-└──────────┬──────────┘     └──────────┬───────────┘
-           │                           │
-           └──────────┬────────────────┘
-                      ▼
-            ┌─────────────────┐
-            │  Resume Parser  │  ← extracts raw text
-            └────────┬────────┘
-                     ▼
-            ┌─────────────────────────┐
-            │  Sentence Transformers  │  ← semantic embeddings
-            └────────┬────────────────┘
-                     ▼
-            ┌─────────────────┐
-            │   JD Matcher    │  ← keyword gap analysis
-            └────────┬────────┘
-                     ▼
-            ┌─────────────────┐
-            │   ATS Scorer    │  ← 5-dimension score
-            └────────┬────────┘
-                     ▼
-            ┌─────────────────┐
-            │  Groq LLaMA 3   │  ← AI fix recommendations
-            └────────┬────────┘
-           ┌─────────┴──────────┐
-           ▼                    ▼
-  ┌──────────────┐    ┌──────────────────┐
-  │ Score Report │    │   PDF Export     │
-  └──────────────┘    └──────────────────┘
-```
+![CVInsight Pro Pipeline](https://github.com/user-attachments/assets/48a516e1-b1a6-4f83-ba40-171456320fbd)
+
 ---
 
 ## 🛠️ Tech Stack
@@ -78,7 +44,6 @@ CVInsight Pro replicates how ATS software reads your resume. Upload your resume,
 | Database | Supabase PostgreSQL |
 | Frontend | Streamlit |
 | PDF Export | ReportLab |
-
 ---
 
 ## ✨ Features
