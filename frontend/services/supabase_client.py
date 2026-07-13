@@ -124,8 +124,12 @@ def exchange_code_for_session(auth_code: str) -> Dict[str, Any]:
             return {'error': 'OAuth exchange returned no session'}
         return _session_dict(resp.session, resp.user)
     except Exception as exc:
-        logger.warning(f'exchange_code_for_session failed: {exc}')
-        return {'error': _humanize(exc)}
+        import traceback
+        traceback.print_exc()
+        logger.exception("Supabase Login Error")
+        return {
+            "error": str(exc)
+        }
 
 
 def sign_out() -> None:
